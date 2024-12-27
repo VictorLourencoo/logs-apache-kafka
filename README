@@ -1,0 +1,7 @@
+# Node / Typescript / Kafka Integration
+
+## This project demonstrates how to implement a Kafka Producer and Consumer using Node.js and TypeScript. It utilizes the kafkajs library for Kafka interactions.
+
+### Description
+At this point we will cover the simple way to integrate Kafka into your Node application using the Kafkajs library using development patterns such as Singleton, Factory and Usecases.
+
