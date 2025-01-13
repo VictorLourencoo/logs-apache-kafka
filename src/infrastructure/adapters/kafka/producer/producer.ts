@@ -1,10 +1,6 @@
 import { Kafka } from 'kafkajs'
+import { LogsContract } from '../../../../Domain/contract/logger'
 
-interface LogsContract {
-    level: string
-    message: string
-    metadata?: Record<string, any>
-}
 
 const kafka = new Kafka({ brokers: ['localhost:9092'] })
 const producer = kafka.producer()
