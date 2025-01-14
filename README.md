@@ -24,6 +24,34 @@
 - Maintainability through clean code practices.
 
 ---
+## Architecture Description
+#### 1. Modularity
+
+    Structure in Modules: The system is divided into independent modules (LOGGER, KAFKA, SERVER, and dependencies), where each module has a single, well-defined responsibility.
+    Benefit: This separation simplifies maintenance, understanding, and extension of the codebase.
+
+#### 2. Dependency Inversion
+
+    Description: Critical components (LOGGER, KAFKA) are injected as dependencies, adhering to the principle that high-level modules should not depend on low-level modules.
+    Example: The server (SERVER) consumes LOGGER and KAFKA without being directly responsible for their initialization.
+    Benefit: This makes the system more flexible and substitutable, allowing implementations to be replaced without impacting the rest of the application.
+
+#### 3. Clean Code Principles
+
+    Applied Principles:
+        Single Responsibility Principle (SRP): Each module has a single, well-defined responsibility (e.g., LOGGER for logging, KAFKA for Kafka integration, SERVER for HTTP routing).
+        Separation of Concerns (SoC): Business logic, infrastructure, and initialization are well-separated.
+    Benefit: The code is readable, intuitive, and easy to extend.
+
+#### 4. Reusable Functionality
+
+    Functional Approach: Instead of using classes, functions manage logic, such as initializing Kafka (buildKafka) and creating servers (BuildServer).
+    Reusability: Components like LOGGER and KAFKA can be reused across different contexts and modules.
+
+### Conclusion
+
+This architecture emphasizes modularity, clean code practices, and flexibility, making it suitable for scalable and maintainable applications. 🚀
+
 
 ## Features
 

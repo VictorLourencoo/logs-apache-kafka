@@ -12,7 +12,6 @@ async function main() {
     }
 
     try {
-        // Inicializa o servidor
         const SERVER = BuildServer(LOGGER, ENV_VAR)
 
         SERVER.listen(ENV_VAR.PORT, () => {
