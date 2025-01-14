@@ -1,6 +1,6 @@
-import { LogsContract } from "../../Domain/contract/logger";
+import { LoggerContract } from "../../Domain/logger";
 
-export async function saveLogToDatabase(log: LogsContract) {
+export async function saveLogToDatabase(log: LoggerContract) {
     console.log(`Saving log to database: ${JSON.stringify(log)}`);
 
 }
